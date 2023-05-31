@@ -1,5 +1,9 @@
 import string
 
+def Finished():
+    task_done = input ("When you are finished reading, please press enter to end program.")
+    
+
 def remove_spaces(text):
     return text.replace(" ", "")
 
@@ -32,4 +36,5 @@ plaintext = convert_to_uppercase(plaintext)
 encrypted = encrypt(plaintext, shift)
 print("Ciphertext:", encrypted)
 print("Thank you for using the cypher, please use the program again when needed!")
+Finished()
 
