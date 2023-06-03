@@ -1,21 +1,17 @@
 import string
-
-#Double click option of running program - allows users to read the terminals and proceed when ready.
+#Double click option of running code, keeps terminal tab open for reading.
 def Finished():
     task_done = input ("When you are finished reading, please press enter to end program.")
     
-#Strips everything that is not an ascii uppercase (symbols and spaces) and adds into the output.
-def conversionCeaser(text):
-    words = " "
-    text = text.upper()
-    for each in text:
-        if each  not in string.ascii_uppercase:
-            continue
-        else:
-            words += each
-    return words
 
-#maps text input and replaces all "." with X as required - gets all ascii uppercases and shifts thier indexed letter (encrypts)
+def remove_spaces(text):
+    return text.replace(" ", "")
+
+
+def convert_to_uppercase(text):
+    return text.upper()
+
+
 def encrypt(text, shift):
     encrypted = ""
     for c in text:
@@ -34,11 +30,10 @@ plaintext = input("Enter your sentence you want to be encrypted (Alphabetical in
 shift = int(input("Enter the cypher key (Numerical): "))
 
 
-# Encryption, places the inputs from user into the encryption function
+# Encryption
+plaintext = remove_spaces(plaintext)
+plaintext = convert_to_uppercase(plaintext)
 encrypted = encrypt(plaintext, shift)
-#strips all inputs that are unwanted (symbols etc)
-encrypted = conversionCeaser(encrypted)
 print("Ciphertext:", encrypted)
 print("Thank you for using the cypher, please use the program again when needed!")
 Finished()
-
