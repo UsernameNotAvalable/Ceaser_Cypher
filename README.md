@@ -1,8 +1,6 @@
 # Ceaser_Cypher
  Ceaser cypher for assessment Cyber automation cluster.
 
-## Comments still to be implemented properly.
-
 Developed with help from Jordan - Peer.
 
 
