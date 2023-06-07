@@ -39,7 +39,7 @@ shift = int(input("Enter the cypher key (Numerical): "))
 
 # Encryption, places the inputs from user into the encryption function
 #plaintext = conversionCeaser(plaintext)
-print(conversionCeaser(plaintext))
+#print(conversionCeaser(plaintext))
 stripped = conversionCeaser(plaintext)
 # strips all inputs that are unwanted (symbols etc)
 encryptedText = encrypt(stripped, shift)
